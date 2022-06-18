@@ -1,0 +1,28 @@
+h1 {
+  font-size: 56px;
+  font-family: Roboto;
+  color: #75b79e;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #eef9bf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  margin: 20px;
+  width: 117px;
+  height: 146px;
+  background-color: #a7e9af;
+  border: 1px solid #99cea8;
+  border-radius: 5px;
+}
