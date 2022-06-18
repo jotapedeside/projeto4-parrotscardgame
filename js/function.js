@@ -5,9 +5,8 @@ let cartaVirou = false; // checa se uma carta está virada
 let desabilitarJogada = false; // desabilita jogada para prevenir que o jogador abra + de 2 cartas durante 1 turno
 let jogadas = 0;
 let paresDescobertos = 0;
-let pontuacao = 0;
-
 let qtde = 0;
+
 qtdeDeCartas();
 
 function qtdeDeCartas() {
@@ -85,11 +84,6 @@ function jogarNovamente() {
   if (resposta == "sim") {
     location.reload();
   }
-}
-
-function resetPontuacao() {
-  paresDescobertos = 0;
-  pontuacao = 0;
 }
 
 (function shuffle() {
