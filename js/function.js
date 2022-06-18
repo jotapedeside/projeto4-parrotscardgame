@@ -37,4 +37,12 @@ function desvirarCartas() {
     resetBoard();
   }, 1000);
 }
+
+(function shuffle() {
+  cartas.forEach((card) => {
+    let ramdomPos = Math.floor(Math.random() * 12);
+    card.style.order = ramdomPos;
+  });
+})();
+
 cartas.forEach((card) => card.addEventListener("click", virarCarta));
