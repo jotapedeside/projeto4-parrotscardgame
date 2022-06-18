@@ -38,6 +38,14 @@ function desvirarCartas() {
   }, 1000);
 }
 
+// desabilita jogada para prevenir que o
+// jogador abra + de 2 cartas durante 1 turno
+function desabilitarCartas() {
+  cartaUm.removeEventListener("click", virarCarta);
+  cartaDois.removeEventListener("click", virarCarta);
+  resetarVars();
+}
+
 function resetarVars() {
   cartaVirou = false;
   desabilitarJogada = false;
