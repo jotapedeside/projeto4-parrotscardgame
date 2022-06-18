@@ -23,3 +23,18 @@ function virarCarta() {
   cartaDois = this;
   checarSeSaoIguais();
 }
+
+function checarSeSaoIguais() {
+  let saoIguais = cartaUm.dataset.parrot === cartaDois.dataset.parrot;
+  saoIguais ? desabilitarCartas() : desvirarCartas();
+}
+
+function desvirarCartas() {
+  desabilitarJogada = true;
+  setTimeout(() => {
+    cartaUm.classList.remove("flip");
+    cartaDois.classList.remove("flip");
+    resetBoard();
+  }, 1000);
+}
+cartas.forEach((card) => card.addEventListener("click", virarCarta));
