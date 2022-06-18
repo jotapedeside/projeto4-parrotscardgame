@@ -34,8 +34,15 @@ function desvirarCartas() {
   setTimeout(() => {
     cartaUm.classList.remove("flip");
     cartaDois.classList.remove("flip");
-    resetBoard();
+    resetarVars();
   }, 1000);
+}
+
+function resetarVars() {
+  cartaVirou = false;
+  desabilitarJogada = false;
+  cartaUm = null;
+  cartaDois = null;
 }
 
 (function shuffle() {
